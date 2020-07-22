@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pl">
 
 <head>
 
 	<meta charset="utf-8">
 	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="description" content="dogxtension">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dest/preview.jpg">
@@ -14,11 +14,30 @@
 
 </head>
 
-<body>
-
+<body id="ddd">
 	<!-- CUSTOM HTML -->
 
-	<header class="navbar">
+	<div id="page-preloader" class="preloader">
+		<svg id="svg-sprite">
+			<symbol id="paw" viewBox="0 0 249 209.32">
+				<ellipse cx="27.917" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
+				<ellipse cx="84.75" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
+				<ellipse cx="162" cy="47.749" stroke-width="0" rx="34.75" ry="47.751"/>
+				<ellipse cx="221.083" cy="106.333" stroke-width="0" rx="27.917" ry="35.833"/>
+				<path stroke-width="0" d="M43.98 165.39s9.76-63.072 76.838-64.574c0 0 71.082-6.758 83.096 70.33 0 0 2.586 19.855-12.54 31.855 0 0-15.75 17.75-43.75-6.25 0 0-7.124-8.374-24.624-7.874 0 0-12.75-.125-21.5 6.625 0 0-16.375 18.376-37.75 12.75 0 0-28.29-7.72-19.77-42.86z"/>
+			</symbol>
+		</svg>
+		
+		<div class="ajax-loader">
+			<div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+			<div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+			<div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+			<div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+			<div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+			<div class="paw"><svg class="icon"><use xlink:href="#paw" /></svg></div>
+		</div>
+	</div>
+	<header  class="navbar">
 		<div class="mobile-nav">
 			<input class="burger" id="burger" type="checkbox" />
 
@@ -31,37 +50,37 @@
 			<nav>    
 				<ul class="ul-trigger">
 					<li class="nav-item">
-						<a class="nav-link active" href="#references">
+						<a class="nav-link-mob active" href="#references">
 							Filmy porównawcze
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#photos">
+						<a class="nav-link-mob" href="#photos">
 							Zdjecia
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#sizes">
+						<a class="nav-link-mob" href="#sizes">
 							Pomiary
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#opinie">
+						<a class="nav-link-mob" href="#opinie">
 							Opinie
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#about">
+						<a class="nav-link-mob" href="#about">
 							o nas
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#contact">
+						<a class="nav-link-mob" href="#contact">
 							kontakt
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/images/dest/pl.png" download>
+						<a class="nav-link-mob" href="/file/pobierz.docx" download>
 							Zasady sprzedazy  / Gwarancja
 						</a>
 					</li>
@@ -75,9 +94,9 @@
 					
 					<div class="col-sm">
 						<ul class="flags">
-							<li><a href=""><img src="images/src/pl.png" alt="pl"></a></li>
-							<li><a href=""><img src="images/src/parasha.png" alt="parasha"></a></li>
-							<li><a href=""><img src="images/src/uk.png" alt="uk"></a></li>
+							<li><a href="/pl"><img src="images/src/pl.png" alt="pl"></a></li>
+							<li><a href="/ru"><img src="images/src/parasha.png" alt="parasha"></a></li>
+							<li><a href="/uk"><img src="images/src/uk.png" alt="uk"></a></li>
 							<!-- <li>1|2|3|4</li> -->
 						</ul>
 					</div>
@@ -100,12 +119,12 @@
 				</div>
 			</div>
 		</div>
-		<nav class="nav">
+		<nav id="nav" class="nav">
 			<div class="container">
 				<div class="row">
 					<ul class="ul-trigger">
 						<li class="nav-item">
-							<a class="nav-link active" href="#references">
+							<a class="nav-link" href="#references">
 								Filmy porównawcze
 							</a>
 						</li>
@@ -135,7 +154,7 @@
 							</a>
 						</li>
 						<li class="nav-item doc">
-							<a class="nav-link" href="/">
+							<a class="nav-link" href="/file/pobierz.docx">
 								Zasady sprzedazy  / Gwarancja
 							</a>
 						</li>
@@ -145,41 +164,65 @@
 			</div>
 			
 		</nav>
-		<section id="references" class="references">
-			<h2 class="h2">Filmy porównawcze</h2>
-			<div class="container">
-				<div class="row">
-
-					<div class="video-references">
-						<div class="col-md col-lg-4"><iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-						<div class="col-md col-lg-4"><iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-						<div class="col-md col-lg-4"><iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-						<div class="col-md col-lg-4"><iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-						<div class="col-md col-lg-4"><iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-						<div class="col-md col-lg-4"><iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-					</div>
-					
-				</div>
-			</div>
-			
-		</section>
 	</header>
-	<section id="photos" class="photos">
+	<section id="references" class="references movie" data-aos="fade-up">
+		<h2 class="h2">Filmy porównawcze</h2>
+		<div class="container">
+			<div class="row">
+
+				<div class="video-references">
+					<div class="col-md-6 col-xl-4">
+						<video  controls>
+							<source src="video/1.mp4">
+						   </video>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<video controls>
+							<source src="video/2.mp4">
+						   </video>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<video controls>
+							<source src="video/3.mp4">
+						   </video>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<video controls>
+							<source src="video/4.mp4">
+						   </video>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<video controls>
+							<source src="video/5.mp4">
+						   </video>
+					</div>
+					<div class="col-md-6 col-xl-4">
+						<video controls>
+							<source src="video/6.mp4">
+						   </video>
+					</div>
+
+					
+
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	<section id="photos" class="photos movie"   data-aos="fade-down">
 		<h2 class="h2">Zdjecia</h2>
 		<div class="container">
 			<div class="row">
-				<div class="m-p-g">
+				<div class="m-p-g" >
 					<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
-						<img src="http://unsplash.it/600/400?image=940" data-full="http://unsplash.it/1200/800?image=940" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/640/450?image=906" data-full="http://unsplash.it/1280/900?image=906" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/550/420?image=885" data-full="http://unsplash.it/1100/840?image=885" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/650/450?image=823" data-full="http://unsplash.it/1300/900?image=823" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/600/350?image=815" data-full="http://unsplash.it/1200/700?image=815" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/560/500?image=677" data-full="http://unsplash.it/1120/1000?image=677" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/670/410?image=401" data-full="http://unsplash.it/1340/820?image=401" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/620/340?image=623" data-full="http://unsplash.it/1240/680?image=623" class="m-p-g__thumbs-img shadow" />
-						<img src="http://unsplash.it/790/390?image=339" data-full="http://unsplash.it/1580/780?image=339" class="m-p-g__thumbs-img shadow" />
+						<img src="images/dest/gallery/1.jpg" data-full="images/dest/gallery/1.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
+						<img src="images/dest/gallery/2.jpg" data-full="images/dest/gallery/2.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
+						<img src="images/dest/gallery/3.jpg" data-full="images/dest/gallery/3.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
+						<img src="images/dest/gallery/4.jpg" data-full="images/dest/gallery/4.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
+						<img src="images/dest/gallery/5.jpg" data-full="images/dest/gallery/5.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
+						<img src="images/dest/gallery/6.jpg" data-full="images/dest/gallery/6.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
+						<img src="images/dest/gallery/7.jpg" data-full="images/dest/gallery/7.jpg" class="m-p-g__thumbs-img shadow" alt="portfolio"/>
 					</div>
 				
 					<div class="m-p-g__fullscreen"></div>
@@ -187,23 +230,25 @@
 			</div>
 		</div>
 	</section>
-	<section id="sizes" class="sizes">
-		<h2 class="h2">Pomiary</h2>
-		<p class="descr">Metoda pobierania wymiarów:</p>
+	<section id="sizes" class="sizes movie" data-aos="fade-up">
+		<h2 class="h2" >Pomiary</h2>
+		<p class="descr" >Metoda pobierania wymiarów:</p>
 		<div class="container">
 			<div class="size-img">
-				<img class="shadow" src="images/dest/pomiar1pl.png" alt="pomiar1">
-				<img class="shadow" src="images/dest/pomiar2.png" alt="pomiar1">
+				<img class="shadow"   src="images/dest/pomiar1pl.png" alt="pomiar1">
+				<img class="shadow"  src="images/dest/pomiar2.png" alt="pomiar1">
 			</div>
 			
 			<div class="size-inform">
 				<div class="col-md col-lg-6">
-					<div class="sizes-text-wrap">
+					<div class="sizes-text-wrap" >
 						<p><samp class="big">W</samp>przypadku psa będącego w stanie zrobić kroki tylnymi łapami o własnych siłach (film porównawczy) potrzebny jest pomiar kroku tylnej łapy (rys.3)</p>
 					</div>
 				</div>
 				<div class="col-md col-lg-6">
-					<iframe class="shadow" src="https://www.youtube.com/embed/Pkr1GcptqnI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<video controls>
+						<source src="video/7.mp4">
+					</video>
 				</div>			
 			</div>
 			<div class="size-inform">
@@ -213,36 +258,37 @@
 					<li>Zmierzyć odległość między zaznaczonymi punktami</li>
 				</ul>
 			</div>
-
-
-			<!-- <div class="size-photo">
-				<img class="project__image" src="/images/dest/pomiar1pl.png" />
-			</div>
-			<div class="overlay">
-				<div class="overlay__inner">
-					<button class="close">close X</button>
-					<img>
-				</div>
-			</div> -->
 		</div>
 	</section>
-	<section id="opinie" class="opinie">
-		<h2 class="h2">Opinie</h2>
+	<section id="opinie" class="opinie movie"  data-aos="fade-up">
+		<h2 class="h2" >Opinie</h2>
 		<div class="container">
 			<div class="splide">
 				<div class="splide__track">
 					<ul class="splide__list">
 						<li class="splide__slide">							
-								<img data-splide-lazy="images/dest/opinie1.png" alt="opinie1">						
+								<img class="openie" src="images/dest/coments/1.jpg" data-splide-lazy="images/dest/coments/1.jpg" alt="opinie1">						
 						</li>
 						<li class="splide__slide">					
-								<img data-splide-lazy="images/dest/opinie1.png" alt="opinie1">							
+								<img class="openie" src="images/dest/coments/2.jpg" data-splide-lazy="images/dest/coments/2.jpg" alt="opinie1">							
 						</li>
 						<li class="splide__slide">					
-								<img data-splide-lazy="images/dest/opinie1.png" alt="opinie1">							
+								<img class="openie" src="images/dest/coments/3.jpg" data-splide-lazy="images/dest/coments/3.jpg" alt="opinie1">							
 						</li>
 						<li class="splide__slide">							
-								<img data-splide-lazy="images/dest/opinie1.png" alt="opinie1">						
+								<img class="openie" src="images/dest/coments/4.jpg" data-splide-lazy="images/dest/coments/4.jpg" alt="opinie1">						
+						</li>
+						<li class="splide__slide">							
+							<img class="openie" src="images/dest/coments/5.jpg" data-splide-lazy="images/dest/coments/5.jpg" alt="opinie1">						
+						</li>
+						<li class="splide__slide">							
+							<img class="openie" src="images/dest/coments/6.jpg" data-splide-lazy="images/dest/coments/6.jpg" alt="opinie1">						
+					    </li>
+						<li class="splide__slide">							
+							<img class="openie" src="images/dest/coments/7.jpg" data-splide-lazy="images/dest/coments/7.jpg" alt="opinie1">						
+						</li>
+						<li class="splide__slide">							
+							<img class="openie" src="images/dest/coments/8.jpg" data-splide-lazy="images/dest/coments/8.jpg" alt="opinie1">						
 						</li>
 
 					</ul>
@@ -250,8 +296,8 @@
 			</div>
 		</div>
 	</section>
-	<section id="about" class="about">
-		<h2 class="h2">O nas</h2>
+	<section id="about" class="about movie" data-aos="fade-up">
+		<h2 class="h2" >O nas</h2>
 		<div class="container">
 			<div class="row">
 				<div class="sizes-text-wrap">
@@ -278,12 +324,12 @@
 			</div>
 		</div>
 	</section>
-	<section id="contact" class="contact">
+	<section id="contact" class="contact movie" data-aos="fade-up">
 		<h2 class="h2">kontakt</h2>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
-					<form  id="contact" class="form" action="" method="post">
+				<div class="col-md-6 offset-md-1">
+					<form   class="form" method="post">
 						<div class="form-row">
 							<div class="col-md-6">
 							<input type="text" class="form-control shadow" id="validationCustom01" placeholder="Imię"  required>
@@ -297,7 +343,7 @@
 								<input type="email" class="form-control shadow" id="inputEmail3" placeholder="E-mail">
 							</div>
 							<div class="col-md-6">
-							<input type="tel" class="form-control shadow" id="validationCustom02" placeholder="Telefon komórkowy"  required>
+							<input type="tel" class="form-control shadow" id="validationCustom03" placeholder="Telefon komórkowy"  required>
 							</div>
 						</div>
 						<div class="form-row">
@@ -308,14 +354,14 @@
 						<button class="submit shadow" type="submit">Kliknij</button>
 					</form>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4 ">
 					<div class="contact-container shadow">
 						<h3 class="h3">Dane kontaktowe</h3>
 						<div class="contact-container-wrap">
-							<span>Komórka:</span><a href="tel:+48798254425"> +48 798 254 425</a>
+							<span>Komórka:</span> <a href="tel:+48798254425">  +48 798 25 44 25</a>
 						</div>
 						<div class="contact-container-wrap">
-						<samp>Email:</samp><a href= "mailto: abc@example.com"> info@dogxtension.eu</a>
+						<samp>Email:</samp> <a href="mailto:abc@example.com">  info@dogxtension.eu</a>
 						</div>
 					</div>
 				</div>
@@ -327,6 +373,7 @@
 	<footer>
 		Copyright © 2020 Lamax-Code. All Rights Reserved
 	</footer>
+
 	<script src="js/app.min.js"></script>
 </body>
 </html>

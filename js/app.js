@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	let checkBox = document.getElementById("burger");
 
 	function toggleBut(t) {
-		if (t.target.closest(".nav-link"))
+		if (t.target.closest(".nav-link-mob"))
 		checkBox.checked = false;
 	}
 
@@ -54,4 +54,64 @@ for (var i = 0; i < linkNav.length; i++) {
   document.addEventListener("click", toggleBut);
 
 
+  window.onscroll = function() {myFunction()};
+
+  var header = document.getElementById("nav");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  const sections = document.querySelectorAll("section");
+  const menu_links = document.getElementsByClassName("nav-link");
+  
+  const makeActive = (link) => menu_links[link].classList.add("active");
+  const removeActive = (link) => menu_links[link].classList.remove("active");
+  const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
+
+  const sectionMargin = 300;
+  
+  
+  let currentActive = 0;
+  window.addEventListener("scroll", () => {
+    
+    const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
+
+    if (current !== currentActive) {
+      removeAllActive();
+      currentActive = current;
+      makeActive(current);
+    }
+  });
+
+
+    document.body.onload = function() {
+   
+
+    setTimeout(function() {
+        var preloader = document.getElementById('page-preloader');
+        if( !document.body.classList.contains('active') )
+    {
+        document.body.classList.add('active');
+    }
+    },1000);
+};
+
+
+
+AOS.init({
+  duration: 1200,
+  useClassNames: true,
+  once: false,
+  // initClassName: true,
+  // animatedClassName: 'animated',
 });
+
+
+
+}, false);
